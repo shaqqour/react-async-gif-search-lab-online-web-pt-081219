@@ -5,7 +5,11 @@ class GifList extends React.Component {
     render() {
         return (
             <ul>
-                <li><img src={ this.props.gif } alt="Dolphin"/></li>
+                {
+                    this.props.gifs.map(gif => {
+                        return <li><img src={gif} alt="GIF"/></li>
+                    })
+                }
             </ul>
         )
     }

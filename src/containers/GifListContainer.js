@@ -20,12 +20,8 @@ class GifListContainer extends React.Component {
         return (
             <div>
                 <GifSearch onSubmit={this.onSubmit}/>
-                <br/>
-                {
-                    this.state.gifs.map((gif, id) => {
-                        return < GifList gif={gif} key={id} />
-                    })
-                }
+                <br />
+                <GifList gifs={this.state.gifs}/>
             </div>
         )
     }

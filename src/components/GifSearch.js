@@ -10,6 +10,7 @@ class GifSearch extends React.Component {
     }
 
     handleChange = (event) => {
+        event.preventDefault();
         this.setState({
             userInput: event.target.value
         })
